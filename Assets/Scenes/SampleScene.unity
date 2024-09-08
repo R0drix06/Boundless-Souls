@@ -643,7 +643,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c521e9ba5cdb0408f779179803a89d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 15
 --- !u!1 &1779406276
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,8 +655,8 @@ GameObject:
   - component: {fileID: 1779406278}
   - component: {fileID: 1779406277}
   m_Layer: 0
-  m_Name: Ceiling
-  m_TagString: Ceiling
+  m_Name: Ceeling
+  m_TagString: Ceeling
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
