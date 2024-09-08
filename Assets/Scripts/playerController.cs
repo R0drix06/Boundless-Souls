@@ -67,7 +67,7 @@ public class playerController : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ceeling"))
+        if (collision.gameObject.CompareTag("Ceiling"))
         {
             isTop = true;
             currentJumps = 2;
@@ -82,7 +82,7 @@ public class playerController : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ceeling"))
+        if (collision.gameObject.CompareTag("Ceiling"))
         {
             isTop = false;
         }
