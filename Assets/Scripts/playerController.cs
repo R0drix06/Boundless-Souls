@@ -8,6 +8,9 @@ public class playerController : MonoBehaviour
  //                     Variables
  //======================================================
 
+    //IMPORTANTE: Las variables "isTop" y "isBot" sirven para saber si el personaje está en el techo o
+    //en el piso en condiciones especiales, de momento no se usan pero va a servir más adelante.
+
     Rigidbody2D rb2d;
     [SerializeField] private int velocidad = 15;
     private bool isTop = false;
@@ -28,27 +31,27 @@ public class playerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            if (isBot && currentJumps > 0)
+            if ((rb2d.gravityScale > 0) && (currentJumps > 0))
             {
                 rb2d.velocity = Vector2.up * velocidad; //Salto Hacia Arriba
                 currentJumps--;
             }
-            else if (isTop)
+            else if (rb2d.gravityScale < 0 && (currentJumps > 1))
             {
-                currentJumps = 1;
                 transform.Translate(0, -6, 0); //TP Hacia Abajo
                 rb2d.gravityScale *= -1;
+                currentJumps = 1;
             }
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-            if (rb2d.gravityScale < 0 && currentJumps > 0)
+            if ((rb2d.gravityScale < 0) && (currentJumps > 0))
             {
                 rb2d.velocity = Vector2.down * velocidad; //Salta Hacia Abajo
                 currentJumps--;
             }
-            else if (isBot)
+            else if ((rb2d.gravityScale > 0) && (currentJumps > 0))
             {
                 transform.Translate(0, 6, 0); //TP Hacia Arriba
                 rb2d.gravityScale *= -1;
@@ -59,7 +62,9 @@ public class playerController : MonoBehaviour
  //======================================================
  //                     Colisiones
  //======================================================
-     
+
+
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ceeling"))
@@ -144,8 +149,29 @@ public class playerController : MonoBehaviour
                                  ?1.     .'         
                                      7<..%
  
-    Usa al sonic para volver cuando se rompa algo.
+    Volve aca cuando se rompa algo.
 
     */
 
+
+
+
+
+
+    //IMPORTANTE (mas o menos): Esta funcion esta acá porque lo único que hace
+    //es evitar que salte un mensaje de advertencia en unity porque no se usan
+    //estas variables. No afecta al código, si les molesta sáquenlo.
+    void hardCodeoTemporal()
+    {
+        if (isTop == false)
+        {
+            isTop = false;
+        }
+
+        if (isBot == false)
+        {
+            isBot = false;
+        }
+
+    }
 }
