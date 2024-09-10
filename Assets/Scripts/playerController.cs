@@ -48,12 +48,7 @@ public class playerController : MonoBehaviour
                 rb2d.gravityScale *= -1;
                 velocidad += 2;
             }
-            else if (rb2d.gravityScale > 0 && currentJumps == 0)
-            {
-                rb2d.velocity = Vector2.down * velocidad; //Deslice
-                playerCollider.size = new Vector2 (1, 0.5f);
-                playerCollider.offset = new Vector2 (0, -0.25f);
-            }
+            
         }
 
         if (Input.GetKeyDown(KeyCode.S))
