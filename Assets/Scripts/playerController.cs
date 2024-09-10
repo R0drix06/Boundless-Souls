@@ -8,8 +8,11 @@ public class playerController : MonoBehaviour
     //                     Variables
     //======================================================
 
+    BoxCollider2D playerCollider;
     Rigidbody2D rb2d;
-    [SerializeField] private int velocidad = 15;
+    [SerializeField] private float velocidad = 13f;
+    private float slideTime = 1.5f;
+    private float currentSlidetime;
     private bool isTop = false;
     private bool isBot = false;
     private int currentJumps = 2;
@@ -20,12 +23,17 @@ public class playerController : MonoBehaviour
 
     void Start()
     {
+        playerCollider = GetComponent<BoxCollider2D>();
+        playerCollider.size = new Vector2 (1, 1);
+
         rb2d = GetComponent<Rigidbody2D>();
-        rb2d.gravityScale = 5;
+        rb2d.gravityScale = 4.5f;
     }
 
     void Update()
     {
+        currentSlidetime += Time.deltaTime;
+
         if (Input.GetKeyDown(KeyCode.W))
         {
             if (isBot && currentJumps > 0)
@@ -38,6 +46,13 @@ public class playerController : MonoBehaviour
                 currentJumps = 1;
                 transform.Translate(0, -6, 0); //TP Hacia Abajo
                 rb2d.gravityScale *= -1;
+                velocidad += 2;
+            }
+            else if (rb2d.gravityScale > 0 && currentJumps == 0)
+            {
+                rb2d.velocity = Vector2.down * velocidad; //Deslice
+                playerCollider.size = new Vector2 (1, 0.5f);
+                playerCollider.offset = new Vector2 (0, -0.25f);
             }
         }
 
@@ -52,9 +67,26 @@ public class playerController : MonoBehaviour
             {
                 transform.Translate(0, 6, 0); //TP Hacia Arriba
                 rb2d.gravityScale *= -1;
+                velocidad -= 2;
+            }
+        }
+
+        //Aceleración
+        if (rb2d.gravityScale <= 15 && rb2d.gravityScale >= -15)
+        {
+            velocidad += 0.125f * Time.deltaTime;
+
+            if (rb2d.gravityScale > 0)
+            {
+                rb2d.gravityScale += 0.1f * Time.deltaTime;
+            }
+            else if (rb2d.gravityScale < 0)
+            {
+                rb2d.gravityScale -= 0.1f * Time.deltaTime;
             }
         }
     }
+
 
     //======================================================
     //                     Colisiones
