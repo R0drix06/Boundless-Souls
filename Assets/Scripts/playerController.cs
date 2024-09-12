@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.Burst.Intrinsics.X86;
 
 public class playerController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class playerController : MonoBehaviour
     private float currentSlidetime;
     private bool isTop = false;
     private bool isBot = false;
+    private bool isSliding = false;
     private int currentJumps = 2;
 
     //======================================================
@@ -32,14 +34,44 @@ public class playerController : MonoBehaviour
 
     void Update()
     {
-        currentSlidetime += Time.deltaTime;
+        Debug.Log(isBot);
 
+        //Deslice
+        if (isSliding)
+        {
+            rb2d.velocity = Vector2.down * velocidad; //Deslice
+            playerCollider.size = new Vector2(1, 0.5f);
+            playerCollider.offset = new Vector2(0, -0.25f);
+
+            currentSlidetime += Time.deltaTime;
+
+            if (currentSlidetime > slideTime)
+            {
+                isSliding = false;
+            }
+
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                rb2d.velocity = Vector2.up * velocidad;
+                isSliding = false;
+            }
+        }
+        else
+        {
+            playerCollider.size = new Vector2(1, 1);
+            playerCollider.offset = new Vector2(0, 0);
+            currentSlidetime = 0;
+        }
+
+
+        //Movimiento
         if (Input.GetKeyDown(KeyCode.W))
         {
             if (isBot && currentJumps > 0)
             {
                 rb2d.velocity = Vector2.up * velocidad; //Salto Hacia Arriba
                 currentJumps--;
+                isSliding = false;
             }
             else if (isTop)
             {
@@ -48,7 +80,11 @@ public class playerController : MonoBehaviour
                 rb2d.gravityScale *= -1;
                 velocidad += 2;
             }
-            
+            else if (rb2d.gravityScale > 0 && currentJumps == 0)
+            {
+                isSliding = true;
+                rb2d.velocity = Vector2.up * velocidad;
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.S))
@@ -94,7 +130,6 @@ public class playerController : MonoBehaviour
             isTop = true;
             currentJumps = 2;
         }
-
         if (collision.gameObject.CompareTag("Ground"))
         {
             isBot = true;
@@ -104,16 +139,23 @@ public class playerController : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ceiling"))
+        if (currentJumps == 1 || currentJumps == 0 && rb2d.gravityScale <= 0)
         {
-            isTop = false;
+            if (collision.gameObject.CompareTag("Ceiling"))
+            {
+                isTop = false;
+            }                        
         }
 
-        if (collision.gameObject.CompareTag("Ground"))
+        if ((currentJumps == 0 && rb2d.gravityScale > 0) || (rb2d.gravityScale < 0))
         {
-            isBot = false;
+            if (collision.gameObject.CompareTag("Ground"))
+            {
+                isBot = false;
+            }
         }
     }
+
 
 
 
@@ -171,7 +213,7 @@ public class playerController : MonoBehaviour
                                  ?1.     .'         
                                      7<..%
  
-    Usa al sonic para volver cuando se rompa algo.
+    Usa al sonic para volver cuando se rompa algo
 
     */
 
