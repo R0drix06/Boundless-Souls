@@ -572,56 +572,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &826887486
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 826887488}
-  - component: {fileID: 826887487}
-  m_Layer: 0
-  m_Name: SpawnerCeiling
-  m_TagString: Untagged
-  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &826887487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826887486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1827579038e5ddc4abd0cb8d8469189d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstaclePrefabs:
-  - {fileID: 8567257028139548311, guid: 2b6fef55f066fb441b5bc05fd61d4732, type: 3}
-  - {fileID: 679505919423754761, guid: 19b899e830f7e784dae699b977d4a915, type: 3}
-  obstacleSpawnTime: 2
-  timeUntilObstacleSpawn: 0
-  obstacleSpeed: 7.5
---- !u!4 &826887488
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826887486}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1352100157
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,7 +583,7 @@ GameObject:
   - component: {fileID: 1352100159}
   - component: {fileID: 1352100158}
   m_Layer: 0
-  m_Name: SpawnerGround
+  m_Name: SpawnerFloor
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -653,7 +603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstaclePrefabs:
   - {fileID: 392486098171893356, guid: 0ed97e7cf6cfb4f458aaa176d9064008, type: 3}
-  - {fileID: 5797490551541948072, guid: 0f278f960fb761c4b92b927d23070715, type: 3}
+  - {fileID: 8567257028139548311, guid: 2b6fef55f066fb441b5bc05fd61d4732, type: 3}
   obstacleSpawnTime: 2
   timeUntilObstacleSpawn: 0
   obstacleSpeed: 7.5
@@ -1339,7 +1289,6 @@ SceneRoots:
   - {fileID: 1588378659}
   - {fileID: 452117859}
   - {fileID: 195991252}
-  - {fileID: 826887488}
   - {fileID: 1352100159}
   - {fileID: 1379171830}
   - {fileID: 1852684975}
