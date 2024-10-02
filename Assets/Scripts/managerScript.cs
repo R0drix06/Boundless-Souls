@@ -8,4 +8,8 @@ public class managerScript : MonoBehaviour
     {
         Destroy(collision.gameObject);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(collision.gameObject);
+    }
 }

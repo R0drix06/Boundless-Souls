@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class startingFloorMovement : MonoBehaviour
 {
-    private float speed = 7.6f;
+    private float speed = 7.5f;
     // Start is called before the first frame update
     void Start()
     {
