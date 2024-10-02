@@ -155,6 +155,11 @@ public class playerController : MonoBehaviour
             anim.SetBool("isAngel", false);
             anim.SetBool("isJumping", false);
         }
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            Destroy(gameObject);
+            //gameManager.instance.gameOver();
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
