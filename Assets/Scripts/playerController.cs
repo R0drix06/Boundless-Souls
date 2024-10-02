@@ -18,6 +18,8 @@ public class playerController : MonoBehaviour
     private bool isBot = false;
     private bool isSliding = false;
     private int currentJumps = 2;
+    private Animator anim;
+    private SpriteRenderer sprite;
 
     //======================================================
     //                     Funciones
@@ -30,6 +32,9 @@ public class playerController : MonoBehaviour
 
         rb2d = GetComponent<Rigidbody2D>();
         rb2d.gravityScale = 4.5f;
+
+        anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();    
     }
 
     void Update()
@@ -72,6 +77,8 @@ public class playerController : MonoBehaviour
                 rb2d.velocity = Vector2.up * velocidad; //Salto Hacia Arriba
                 currentJumps--;
                 isSliding = false;
+                anim.SetBool("isjumping", true);
+
             }
             else if (isTop)
             {
@@ -79,6 +86,7 @@ public class playerController : MonoBehaviour
                 transform.Translate(0, -6, 0); //TP Hacia Abajo
                 rb2d.gravityScale *= -1;
                 velocidad += 2;
+                sprite.flipY = false;
             }
             else if (rb2d.gravityScale > 0 && currentJumps == 0)
             {
@@ -93,12 +101,15 @@ public class playerController : MonoBehaviour
             {
                 rb2d.velocity = Vector2.down * velocidad; //Salta Hacia Abajo
                 currentJumps--;
+                anim.SetBool("isjumping", true);
             }
             else if (isBot)
             {
                 transform.Translate(0, 6, 0); //TP Hacia Arriba
                 rb2d.gravityScale *= -1;
                 velocidad -= 2;
+                sprite.flipY = true;
+
             }
         }
 
@@ -110,10 +121,13 @@ public class playerController : MonoBehaviour
             if (rb2d.gravityScale > 0)
             {
                 rb2d.gravityScale += 0.1f * Time.deltaTime;
+                anim.SetBool("isRunning", true);
             }
             else if (rb2d.gravityScale < 0)
             {
                 rb2d.gravityScale -= 0.1f * Time.deltaTime;
+                anim.SetBool("isRunning", true);
+
             }
         }
     }
@@ -129,11 +143,17 @@ public class playerController : MonoBehaviour
         {
             isTop = true;
             currentJumps = 2;
+            anim.SetBool("isDemon", false);
+            anim.SetBool("isAngel", true);
+            anim.SetBool("isJumping", false);
         }
         if (collision.gameObject.CompareTag("Ground"))
         {
             isBot = true;
             currentJumps = 1;
+            anim.SetBool("isDemon", true);
+            anim.SetBool("isAngel", false);
+            anim.SetBool("isJumping", false);
         }
     }
 
