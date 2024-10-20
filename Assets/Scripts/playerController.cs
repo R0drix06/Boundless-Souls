@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using static Unity.Burst.Intrinsics.X86;
 
 public class playerController : MonoBehaviour
@@ -9,6 +10,10 @@ public class playerController : MonoBehaviour
     //======================================================
     //                     Variables
     //======================================================
+
+    [SerializeField] Image barra;
+    private float porcentajeBarra = 100;
+    private float porcentajeActual = 100;
 
     BoxCollider2D playerCollider;
     Rigidbody2D rb2d;
@@ -40,7 +45,16 @@ public class playerController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(isBot);
+        barra.fillAmount = porcentajeActual / porcentajeBarra;
+
+        porcentajeActual -= 10 * Time.deltaTime;
+
+        if (barra.fillAmount <= 0)
+        {
+            Destroy(gameObject);
+            //gameManager.instance.gameOver();
+            SceneManager.LoadScene("MainMenu");
+        }
 
         //Deslice
         if (isSliding)
