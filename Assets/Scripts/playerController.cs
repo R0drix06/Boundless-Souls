@@ -49,6 +49,11 @@ public class playerController : MonoBehaviour
 
         porcentajeActual -= 10 * Time.deltaTime;
 
+        if (porcentajeActual > 100)
+        {
+            porcentajeActual = 100;
+        }
+
         if (barra.fillAmount <= 0)
         {
             Destroy(gameObject);
@@ -225,6 +230,15 @@ public class playerController : MonoBehaviour
             {
                 isBot = false;
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Orb"))
+        {
+            porcentajeActual += 20;
+            Destroy(collision.gameObject);
         }
     }
 
