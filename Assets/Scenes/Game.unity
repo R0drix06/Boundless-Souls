@@ -191,6 +191,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstaclePrefabs:
   - {fileID: 5660307967435326852, guid: a6fd8a4850a2c4a489ec5933d29cecb6, type: 3}
+  - {fileID: 5657385362951070729, guid: 877b41bb01cd2264dbc94d99291b7aef, type: 3}
+  - {fileID: 3534429990984946045, guid: 6eb3afa04b4e9a34b8eb774c522b276f, type: 3}
+  - {fileID: 8649717252225776523, guid: 5d61c90ee87c23f46853764d2f00c2ca, type: 3}
   obstacleSpawnTime: 2
   timeUntilObstacleSpawn: 0
   obstacleSpeed: 7.5
@@ -557,6 +560,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstaclePrefabs:
   - {fileID: 1504865331367566382, guid: b5885c72873efc3459d75d88796b57de, type: 3}
+  - {fileID: 81822894227815517, guid: 1345cfdf603b8c04f88dae55a8e7228e, type: 3}
+  - {fileID: 1668831400622486724, guid: 0a3863e9c82054e4bbc6a659f28f24d2, type: 3}
+  - {fileID: 8281750214796584852, guid: 2fc4e48e70f57344f858ddf3951d956f, type: 3}
   obstacleSpawnTime: 2
   timeUntilObstacleSpawn: 0
   obstacleSpeed: 7.5
