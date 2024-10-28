@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8872410815211999742}
   - component: {fileID: 7457249242043862944}
   - component: {fileID: -691020644718227745}
+  - component: {fileID: 4781058808478230004}
   m_Layer: 0
   m_Name: Orbe(Azul)
   m_TagString: Orb
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 811291146127109017}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12, y: 2, z: 0}
+  m_LocalPosition: {x: 20, y: 1, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -148,3 +149,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &4781058808478230004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811291146127109017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5996d41e5d39cfc49b065d506e2d6259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

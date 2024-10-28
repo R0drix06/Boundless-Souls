@@ -196,7 +196,6 @@ MonoBehaviour:
   - {fileID: 8649717252225776523, guid: 5d61c90ee87c23f46853764d2f00c2ca, type: 3}
   obstacleSpawnTime: 2
   timeUntilObstacleSpawn: 0
-  obstacleSpeed: 7.5
 --- !u!4 &195991252
 Transform:
   m_ObjectHideFlags: 0
@@ -565,7 +564,6 @@ MonoBehaviour:
   - {fileID: 8281750214796584852, guid: 2fc4e48e70f57344f858ddf3951d956f, type: 3}
   obstacleSpawnTime: 2
   timeUntilObstacleSpawn: 0
-  obstacleSpeed: 7.5
 --- !u!4 &452117859
 Transform:
   m_ObjectHideFlags: 0
@@ -1649,6 +1647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5730afd4ecc24b84885891e8ba36357b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSpeed: 7.5
 --- !u!4 &1379171830
 Transform:
   m_ObjectHideFlags: 0
@@ -2726,7 +2725,7 @@ Transform:
   m_GameObject: {fileID: 2110297092}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: 0}
+  m_LocalPosition: {x: 24.83, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2749,7 +2748,6 @@ MonoBehaviour:
   - {fileID: 6286478845121846203, guid: 6b042af40d95d234dbc7c657fe7fb428, type: 3}
   obstacleSpawnTime: 2
   timeUntilObstacleSpawn: 0
-  obstacleSpeed: 7.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

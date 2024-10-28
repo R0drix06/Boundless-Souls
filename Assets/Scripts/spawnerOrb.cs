@@ -7,7 +7,6 @@ public class spawnerOrb : MonoBehaviour
     [SerializeField] private GameObject[] obstaclePrefabs;
     public float obstacleSpawnTime = 3.0f;
     public float timeUntilObstacleSpawn;
-    public float obstacleSpeed = 7.25f;
 
     private void Update()
     {
@@ -15,7 +14,6 @@ public class spawnerOrb : MonoBehaviour
         if (obstacleSpawnTime >= 0.75)
         {
             obstacleSpawnTime -= 0.05f * Time.deltaTime;
-            obstacleSpeed += 0.175f * Time.deltaTime;
         }
 
     }
@@ -35,8 +33,5 @@ public class spawnerOrb : MonoBehaviour
     {
         GameObject obstacleToSpawn = obstaclePrefabs[Random.Range(0, obstaclePrefabs.Length)];
         GameObject spawnedObstacle = Instantiate(obstacleToSpawn);
-
-        Rigidbody2D obstacleRB = spawnedObstacle.GetComponent<Rigidbody2D>();
-        obstacleRB.velocity = Vector2.left * obstacleSpeed;
     }
 }
