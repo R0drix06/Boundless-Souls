@@ -19,6 +19,11 @@ public class pickerManager : MonoBehaviour
         isBottom = false;
         
     }
+    private void Awake()
+    {
+        isTop = true;
+        isBottom = false;
+    }
 
     // Update is called once per frame
     void Update()

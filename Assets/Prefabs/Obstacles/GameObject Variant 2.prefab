@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameObject Variant 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2683204038360437306, guid: 1345cfdf603b8c04f88dae55a8e7228e, type: 3}
+      propertyPath: m_Size.x
+      value: 4.2697144
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683204038360437306, guid: 1345cfdf603b8c04f88dae55a8e7228e, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.3101431
+      objectReference: {fileID: 0}
     - target: {fileID: 2701157233622160695, guid: 1345cfdf603b8c04f88dae55a8e7228e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.1977577
