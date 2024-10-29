@@ -75,7 +75,7 @@ public class playerController : MonoBehaviour
                 isSliding = false;
             }
 
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             {
                 rb2d.velocity = Vector2.up * velocidad;
                 isSliding = false;
@@ -90,7 +90,7 @@ public class playerController : MonoBehaviour
 
 
         //Movimiento
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (isBot && currentJumps > 0)
             {
@@ -120,7 +120,7 @@ public class playerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             if (rb2d.gravityScale < 0 && currentJumps > 0)
             {

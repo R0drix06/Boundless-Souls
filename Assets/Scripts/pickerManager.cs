@@ -28,12 +28,12 @@ public class pickerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isTop && ((Input.GetKeyDown(KeyCode.S)) || Input.GetKeyDown(KeyCode.W)))
+        if (isTop && ((Input.GetKeyDown(KeyCode.S)) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.DownArrow)|| Input.GetKeyDown(KeyCode.UpArrow)))
         {
             isTop = false;
             isBottom = true;
         }
-        else if (isBottom && ((Input.GetKeyDown(KeyCode.S)) || Input.GetKeyDown(KeyCode.W)))
+        else if (isBottom && ((Input.GetKeyDown(KeyCode.S)) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.UpArrow)))
         {
             isTop = true;
             isBottom = false;
