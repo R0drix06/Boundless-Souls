@@ -194,6 +194,7 @@ MonoBehaviour:
   - {fileID: 5657385362951070729, guid: 877b41bb01cd2264dbc94d99291b7aef, type: 3}
   - {fileID: 3534429990984946045, guid: 6eb3afa04b4e9a34b8eb774c522b276f, type: 3}
   - {fileID: 8649717252225776523, guid: 5d61c90ee87c23f46853764d2f00c2ca, type: 3}
+  - {fileID: 4115136023441827563, guid: a4347e928d070eb4ca8f5eda4d67b464, type: 3}
   obstacleSpawnTime: 2
   timeUntilObstacleSpawn: 0
 --- !u!4 &195991252
@@ -562,6 +563,7 @@ MonoBehaviour:
   - {fileID: 81822894227815517, guid: 1345cfdf603b8c04f88dae55a8e7228e, type: 3}
   - {fileID: 1668831400622486724, guid: 0a3863e9c82054e4bbc6a659f28f24d2, type: 3}
   - {fileID: 8281750214796584852, guid: 2fc4e48e70f57344f858ddf3951d956f, type: 3}
+  - {fileID: 7650730126208251205, guid: 5d6d2d6cdbaa5ce41be087db97563cce, type: 3}
   obstacleSpawnTime: 2
   timeUntilObstacleSpawn: 0
 --- !u!4 &452117859
