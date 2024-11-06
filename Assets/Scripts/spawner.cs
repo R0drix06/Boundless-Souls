@@ -15,9 +15,7 @@ public class spawner : MonoBehaviour
         {
             obstacleSpawnTime -= 0.05f * Time.deltaTime;
         }
-        
     }
-
     private void SpawnLoop()
     {
         timeUntilObstacleSpawn += Time.deltaTime;

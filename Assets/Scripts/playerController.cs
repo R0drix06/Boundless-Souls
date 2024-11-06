@@ -94,7 +94,7 @@ public class playerController : MonoBehaviour
         {
             if (isBot && currentJumps > 0)
             {
-                rb2d.velocity = Vector2.up * velocidad; //Salto Hacia Arriba
+                rb2d.velocity = Vector2.up * velocidad * 1.15f; //Salto Hacia Arriba
                 currentJumps--;
                 isSliding = false;
 
