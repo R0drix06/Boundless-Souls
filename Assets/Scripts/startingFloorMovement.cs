@@ -14,6 +14,6 @@ public class startingFloorMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(1 * Time.deltaTime * -speed, 0, 0);
+       
     }
 }

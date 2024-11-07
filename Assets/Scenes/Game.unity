@@ -190,7 +190,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefabs:
-  - {fileID: 5660307967435326852, guid: a6fd8a4850a2c4a489ec5933d29cecb6, type: 3}
   - {fileID: 5657385362951070729, guid: 877b41bb01cd2264dbc94d99291b7aef, type: 3}
   - {fileID: 3534429990984946045, guid: 6eb3afa04b4e9a34b8eb774c522b276f, type: 3}
   - {fileID: 8649717252225776523, guid: 5d61c90ee87c23f46853764d2f00c2ca, type: 3}
@@ -291,6 +290,8 @@ GameObject:
   - component: {fileID: 272809937}
   - component: {fileID: 272809936}
   - component: {fileID: 272809935}
+  - component: {fileID: 272809939}
+  - component: {fileID: 272809938}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Ground
@@ -410,6 +411,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1852684975}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &272809938
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272809934}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
+--- !u!114 &272809939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272809934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5996d41e5d39cfc49b065d506e2d6259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameSpeed: 0
 --- !u!1 &337788257
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +600,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefabs:
-  - {fileID: 1504865331367566382, guid: b5885c72873efc3459d75d88796b57de, type: 3}
   - {fileID: 81822894227815517, guid: 1345cfdf603b8c04f88dae55a8e7228e, type: 3}
   - {fileID: 1668831400622486724, guid: 0a3863e9c82054e4bbc6a659f28f24d2, type: 3}
   - {fileID: 8281750214796584852, guid: 2fc4e48e70f57344f858ddf3951d956f, type: 3}
@@ -676,6 +716,8 @@ GameObject:
   - component: {fileID: 496479076}
   - component: {fileID: 496479078}
   - component: {fileID: 496479077}
+  - component: {fileID: 496479080}
+  - component: {fileID: 496479079}
   m_Layer: 0
   m_Name: Ceiling
   m_TagString: Ceiling
@@ -795,6 +837,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &496479079
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496479075}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
+--- !u!114 &496479080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496479075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5996d41e5d39cfc49b065d506e2d6259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameSpeed: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,6 +1267,8 @@ GameObject:
   - component: {fileID: 683576746}
   - component: {fileID: 683576748}
   - component: {fileID: 683576747}
+  - component: {fileID: 683576750}
+  - component: {fileID: 683576749}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Ground
@@ -1304,6 +1388,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &683576749
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683576745}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
+--- !u!114 &683576750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683576745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5996d41e5d39cfc49b065d506e2d6259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameSpeed: 0
 --- !u!1 &799508779
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,6 +1708,7 @@ GameObject:
   - component: {fileID: 1379171829}
   - component: {fileID: 1379171828}
   - component: {fileID: 1379171831}
+  - component: {fileID: 1379171832}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1691,6 +1816,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1379171832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379171827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6c8a0e993b7f942a44a73143d4e9bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  everythingSpeed: 7.5
 --- !u!1 &1471346159
 GameObject:
   m_ObjectHideFlags: 0
@@ -2184,6 +2322,8 @@ GameObject:
   - component: {fileID: 1779406279}
   - component: {fileID: 1779406278}
   - component: {fileID: 1779406277}
+  - component: {fileID: 1779406281}
+  - component: {fileID: 1779406280}
   m_Layer: 0
   m_Name: Ceiling
   m_TagString: Ceiling
@@ -2303,6 +2443,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1910371894}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1779406280
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779406276}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
+--- !u!114 &1779406281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779406276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5996d41e5d39cfc49b065d506e2d6259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameSpeed: 0
 --- !u!1 &1852684971
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,8 +8,13 @@ public class spawnerFloors : MonoBehaviour
     [SerializeField] private GameObject[] ceilingPrefabs;
     public float floorSpawnTime = 3.0f;
     public float timeUntilFloorSpawn;
-    public float floorSpeed = 7.25f;
+    [SerializeField] private float floorSpeed;
 
+
+    private void Start()
+    {
+        floorSpeed = globals.Instance.everythingSpeed;
+    }
     private void Update()
     {
         SpawnLoop();
@@ -38,15 +43,12 @@ public class spawnerFloors : MonoBehaviour
         GameObject groundToSpawn = groundPrefabs[Random.Range(0, groundPrefabs.Length)];
         GameObject spawnedGround = Instantiate(groundToSpawn, groundToSpawn.transform.position, Quaternion.identity);
 
-        Rigidbody2D groundRB = spawnedGround.GetComponent<Rigidbody2D>();
-        groundRB.velocity = Vector2.left * floorSpeed;
+  
     }
     private void SpawnCeiling()
     {
         GameObject ceilingToSpawn = ceilingPrefabs[Random.Range(0, ceilingPrefabs.Length)];
         GameObject spawnedCeiling = Instantiate(ceilingToSpawn, ceilingToSpawn.transform.position, Quaternion.identity);
 
-        Rigidbody2D ceilingRB = spawnedCeiling.GetComponent<Rigidbody2D>();
-        ceilingRB.velocity = Vector2.left * floorSpeed;
     }
 }
