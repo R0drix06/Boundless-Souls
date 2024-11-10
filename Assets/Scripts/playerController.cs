@@ -65,8 +65,8 @@ public class playerController : MonoBehaviour
         if (isSliding)
         {
             rb2d.velocity = Vector2.down * velocidad; //Deslice
-            playerCollider.size = new Vector2(1, 0.5f);
-            playerCollider.offset = new Vector2(0, -0.25f);
+            playerCollider.size = new Vector2(2.5f, 2);
+            playerCollider.offset = new Vector2(0, -2);
 
             currentSlidetime += Time.deltaTime;
 
@@ -83,7 +83,7 @@ public class playerController : MonoBehaviour
         }
         else
         {
-            playerCollider.size = new Vector2(1, 1);
+            playerCollider.size = new Vector2(2.5f, 6);
             playerCollider.offset = new Vector2(0, 0);
             currentSlidetime = 0;
         }
