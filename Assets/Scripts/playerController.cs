@@ -12,8 +12,8 @@ public class playerController : MonoBehaviour
     //======================================================
 
     [SerializeField] Image barra;
-    private float porcentajeBarra = 100;
-    private float porcentajeActual = 100;
+    public float porcentajeBarra = 100;
+    public float porcentajeActual = 100;
 
     BoxCollider2D playerCollider;
     Rigidbody2D rb2d;
