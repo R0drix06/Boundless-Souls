@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -5361823255454731225}
   - component: {fileID: -5562146635901581088}
   - component: {fileID: -3977785700729627387}
+  - component: {fileID: 5430466337658388516}
   m_Layer: 0
   m_Name: ObstacleBot1
   m_TagString: Obstacle
@@ -74,6 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5996d41e5d39cfc49b065d506e2d6259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSpeed: 0
 --- !u!61 &-5562146635901581088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,3 +173,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5430466337658388516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504865331367566382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 794fc9c07653aab49b9119a3411feaf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

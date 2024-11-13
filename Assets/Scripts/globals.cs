@@ -7,15 +7,18 @@ public class globals : MonoBehaviour
 
 
     public static globals Instance;
-    public float everythingSpeed = 7.5f;
+    public float everythingSpeed;
+    public float dischargeRate;
 
     private void Awake()
     {
-        
+        everythingSpeed = 7.5f;
+        dischargeRate = 5f;
+
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); 
+            
         }
         else
         {
@@ -31,6 +34,10 @@ public class globals : MonoBehaviour
         {
             everythingSpeed += 0.175f * Time.deltaTime;
         }
-        
+        if (dischargeRate <= 15)
+        {
+            dischargeRate += 0.2f * Time.deltaTime;
+        }
+
     }
 }

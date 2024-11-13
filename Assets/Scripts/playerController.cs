@@ -14,6 +14,7 @@ public class playerController : MonoBehaviour
     [SerializeField] Image barra;
     public float porcentajeBarra = 100;
     public float porcentajeActual = 100;
+    [SerializeField] private float discharge;
 
     BoxCollider2D playerCollider;
     Rigidbody2D rb2d;
@@ -41,13 +42,15 @@ public class playerController : MonoBehaviour
 
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();    
+
+        
     }
 
     void Update()
     {
         barra.fillAmount = porcentajeActual / porcentajeBarra;
-
-        porcentajeActual -= 10 * Time.deltaTime;
+        discharge = globals.Instance.dischargeRate;
+        porcentajeActual -= discharge * Time.deltaTime;
 
         if (porcentajeActual > 100)
         {

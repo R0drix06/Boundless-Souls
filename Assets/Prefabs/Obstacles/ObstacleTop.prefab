@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7391549525325945138}
   - component: {fileID: 5885907135884910378}
   - component: {fileID: -6862271492330636352}
+  - component: {fileID: 2219526075452409460}
   m_Layer: 0
   m_Name: ObstacleTop
   m_TagString: Obstacle
@@ -74,6 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5996d41e5d39cfc49b065d506e2d6259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSpeed: 0
 --- !u!61 &5885907135884910378
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,3 +173,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2219526075452409460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5660307967435326852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 794fc9c07653aab49b9119a3411feaf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
