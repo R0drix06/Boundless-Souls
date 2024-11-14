@@ -10,6 +10,8 @@ public class globals : MonoBehaviour
     public float everythingSpeed;
     public float dischargeRate;
 
+    public bool perder = false;
+
     private void Awake()
     {
         everythingSpeed = 7.5f;

@@ -59,9 +59,11 @@ public class playerController : MonoBehaviour
 
         if (barra.fillAmount <= 0)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             //gameManager.instance.gameOver();
-            SceneManager.LoadScene("MainMenu");
+            //SceneManager.LoadScene("MainMenu");
+
+            globals.Instance.perder = true;
         }
 
         //Deslice
@@ -110,7 +112,7 @@ public class playerController : MonoBehaviour
             {
 
                 currentJumps = 1;
-                transform.Translate(0, -6, 0); //TP Hacia Abajo
+                transform.Translate(0, -6.3f, 0); //TP Hacia Abajo
                 rb2d.gravityScale *= -1;
                 velocidad += 2;
                 sprite.flipY = false;
@@ -136,7 +138,7 @@ public class playerController : MonoBehaviour
             }
             else if (isBot)
             {
-                transform.Translate(0, 6, 0); //TP Hacia Arriba
+                transform.Translate(0, 6.3f, 0); //TP Hacia Arriba
                 rb2d.gravityScale *= -1;
                 velocidad -= 2;
                 sprite.flipY = true;
@@ -213,7 +215,8 @@ public class playerController : MonoBehaviour
         {
             Destroy(gameObject);
             //gameManager.instance.gameOver();
-            SceneManager.LoadScene("MainMenu");
+            //SceneManager.LoadScene("MainMenu");
+            globals.Instance.perder = true;
         }
     }
 
