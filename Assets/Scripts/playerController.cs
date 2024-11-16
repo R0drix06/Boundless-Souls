@@ -11,6 +11,9 @@ public class playerController : MonoBehaviour
     //                     Variables
     //======================================================
 
+
+
+
     [SerializeField] Image barra;
     public float porcentajeBarra = 100;
     public float porcentajeActual = 100;
@@ -21,8 +24,8 @@ public class playerController : MonoBehaviour
     [SerializeField] private float velocidad = 13f;
     private float slideTime = 1.5f;
     private float currentSlidetime;
-    private bool isTop = false;
-    private bool isBot = false;
+    public bool isTop = false;
+    public bool isBot = false;
     private bool isSliding = false;
     private int currentJumps = 2;
     private Animator anim;

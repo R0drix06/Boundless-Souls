@@ -13,6 +13,8 @@ public class managerScript : MonoBehaviour
     [SerializeField] GameObject pauseScreen;
     [SerializeField] GameObject barra;
     [SerializeField] GameObject botones;
+    [SerializeField] GameObject textoBot;
+    [SerializeField] GameObject textoTop;
 
     private void Awake()
     {
@@ -22,9 +24,13 @@ public class managerScript : MonoBehaviour
         loseScreen.SetActive(false);
         Time.timeScale = 1;
 
+
+
     }
     private void Update()
-    {
+    {       
+
+
         if (gameSpeed <= 12f)
         {
             gameSpeed += 0.175f * Time.deltaTime;
