@@ -11,9 +11,6 @@ public class playerController : MonoBehaviour
     //                     Variables
     //======================================================
 
-
-
-
     [SerializeField] Image barra;
     public float porcentajeBarra = 100;
     public float porcentajeActual = 100;
@@ -22,7 +19,7 @@ public class playerController : MonoBehaviour
     BoxCollider2D playerCollider;
     Rigidbody2D rb2d;
     [SerializeField] private float velocidad = 13f;
-    private float slideTime = 1.5f;
+    private float slideTime = 1f;
     private float currentSlidetime;
     public bool isTop = false;
     public bool isBot = false;
@@ -69,6 +66,24 @@ public class playerController : MonoBehaviour
             globals.Instance.perder = true;
         }
 
+
+
+        if(isSliding)
+        {
+
+            anim.SetBool("isSliding", true);
+            //anim.SetBool("isjumping", false);
+            anim.SetBool("isRunning", false);
+
+        }
+        else
+        {
+
+            anim.SetBool("isSliding", false);
+
+
+        }
+
         //Deslice
         if (isSliding)
         {
@@ -81,6 +96,7 @@ public class playerController : MonoBehaviour
             if (currentSlidetime > slideTime)
             {
                 isSliding = false;
+
             }
 
             if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
@@ -124,6 +140,7 @@ public class playerController : MonoBehaviour
             else if (rb2d.gravityScale > 0 && currentJumps == 0)
             {
                 isSliding = true;
+                
                 rb2d.velocity = Vector2.up * velocidad;
             }
         }
