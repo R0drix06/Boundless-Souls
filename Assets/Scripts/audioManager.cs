@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class audioManager : MonoBehaviour
 {
-    [SerializeField] AudioSource musica;
+    [SerializeField] public AudioSource musica;
     [SerializeField] AudioSource sfx;
+    public static audioManager Instance;
 
     public AudioClip musicaFondo;
     public AudioClip muerte;

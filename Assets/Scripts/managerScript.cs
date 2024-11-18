@@ -52,7 +52,7 @@ public class managerScript : MonoBehaviour
             //SceneManager.LoadScene("MainMenu");
         }
 
-        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKey(KeyCode.P))
+        if((Input.GetKeyDown(KeyCode.Escape) || Input.GetKey(KeyCode.P)) && globals.Instance.perder == false)
         {
             if ( isPaused == false) {
 

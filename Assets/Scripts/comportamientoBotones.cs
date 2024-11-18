@@ -5,16 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class comportamientoBotones : MonoBehaviour
 {
+
+
+    [SerializeField] public AudioSource musica1;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void mainMenu()
@@ -30,4 +33,30 @@ public class comportamientoBotones : MonoBehaviour
         SceneManager.LoadScene("Game");
 
     }
+
+    public void musicPlay(bool active)
+    {
+
+       
+
+
+        if (active == true)
+        {
+
+
+            musica1.Play();
+        }
+        else
+        {
+
+
+            musica1.Stop();
+        }
+
+
+
+
+    }
 }
+
+  
