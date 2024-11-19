@@ -57,7 +57,7 @@ public class managerScript : MonoBehaviour
             if ( isPaused == false) {
 
                 isPaused = true;
-                 pauseScreen.SetActive(true);
+                pauseScreen.SetActive(true);
                 Time.timeScale = 0;
                 barra.SetActive(false);
                 botones.SetActive(true);

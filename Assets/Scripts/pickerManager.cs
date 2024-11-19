@@ -51,11 +51,19 @@ public class pickerManager : MonoBehaviour
             pickerTop.SetActive(false);
         }
 
-        if (isTop && (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Space))) { 
+        if (isTop && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))) { 
         
         SceneManager.LoadScene("Game");
         }
 
-        
+        if (isBottom && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)))
+        {
+
+            SceneManager.LoadScene("opciones");
+
+        }
+
+
+
     }
 }

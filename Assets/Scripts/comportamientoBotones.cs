@@ -34,29 +34,7 @@ public class comportamientoBotones : MonoBehaviour
 
     }
 
-    //public void musicPlay(bool active)
-    //{
-
-       
-
-
-    //    if (active == true)
-    //    {
-
-
-    //        musica1.Play();
-    //    }
-    //    else
-    //    {
-
-
-    //        musica1.Stop();
-    //    }
-
-
-
-
-    //}
+   
 }
 
   

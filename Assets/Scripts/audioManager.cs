@@ -35,7 +35,23 @@ public class audioManager : MonoBehaviour
     void Start()
     {
         musica.clip = musicaFondo;
-        PlayBackgroundMusic(true);
+        
+        if (PlayerPrefs.GetInt("musicaPlay") == 0)
+        {
+
+            PlayBackgroundMusic(true);
+
+        }
+
+        if (PlayerPrefs.GetInt("musicaPlay") == 1)
+        {
+
+            PlayBackgroundMusic(false);
+
+        }
+
+
+
     }
 
     void Update()
@@ -72,10 +88,15 @@ public class audioManager : MonoBehaviour
         if (toggleBackgroundMusic)
         {
             musica.Play();
+            PlayerPrefs.SetInt("musicaPlay", 0);
+
+
         }
         else
         {
-            musica.Stop();
+            musica.Stop(); 
+            PlayerPrefs.SetInt("musicaPlay", 1);
+
         }
     }
 }

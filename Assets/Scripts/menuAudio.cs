@@ -13,12 +13,27 @@ public class menuAudio : MonoBehaviour
     void Start()
     {
         musica.clip = musicaFondo;
-        musica.Play();
+
+
+       
+     
     }
 
     void Update()
     {
+    if (PlayerPrefs.GetInt("musicaPlay") == 0)
+        {
 
+            musica.Play();
+
+        }
+
+        if (PlayerPrefs.GetInt("musicaPlay") == 1)
+        {
+
+            musica.Stop();
+
+        }
     }
 
     public void SFX_Muerte()
