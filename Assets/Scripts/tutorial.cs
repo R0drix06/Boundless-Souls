@@ -18,7 +18,7 @@ public class tutorial : MonoBehaviour
     void Update()
     {
 
-        movimiento += 0.8f * Time.deltaTime;
+        movimiento += 0.2f * Time.deltaTime;
 
         // Obtener la posición actual
         Vector3 nuevaPosicion = posicion.position;

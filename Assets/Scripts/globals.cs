@@ -14,7 +14,7 @@ public class globals : MonoBehaviour
 
     private void Awake()
     {
-        everythingSpeed = 6.5f;
+        everythingSpeed = 5f;
         dischargeRate = 5f;
 
         if (Instance == null)
@@ -34,7 +34,7 @@ public class globals : MonoBehaviour
         
         if (everythingSpeed <= 12f)
         {
-            everythingSpeed += 0.175f * Time.deltaTime;
+            everythingSpeed += 0.15f * Time.deltaTime;
         }
         if (dischargeRate <= 15)
         {
