@@ -220,6 +220,7 @@ public class playerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ceiling"))
         {
             isTop = true;
+            isBot = false;
             currentJumps = 2;
             anim.SetBool("isjumping", false);
 
@@ -227,6 +228,7 @@ public class playerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isBot = true;
+            isTop = false;
             currentJumps = 1;
             anim.SetBool("isjumping", false);
 
