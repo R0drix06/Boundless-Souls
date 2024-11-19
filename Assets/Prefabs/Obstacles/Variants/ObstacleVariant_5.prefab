@@ -131,8 +131,6 @@ GameObject:
   - component: {fileID: 3179274419665999006}
   - component: {fileID: 6323883225327696268}
   - component: {fileID: 7680886428544896298}
-  - component: {fileID: 4402682499482066782}
-  - component: {fileID: 9032967683255746147}
   - component: {fileID: 8140408484396997218}
   m_Layer: 0
   m_Name: ObstacleVariant_5
@@ -187,32 +185,6 @@ Rigidbody2D:
   m_CollisionDetection: 1
   m_Constraints: 6
 --- !u!114 &7680886428544896298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3716571439502139314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5996d41e5d39cfc49b065d506e2d6259, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameSpeed: 0
---- !u!114 &4402682499482066782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3716571439502139314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5996d41e5d39cfc49b065d506e2d6259, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameSpeed: 0
---- !u!114 &9032967683255746147
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

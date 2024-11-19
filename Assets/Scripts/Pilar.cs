@@ -18,7 +18,7 @@ public class Pilar : MonoBehaviour
 
     void Update()
     {
-        parallaxSpeed = globals.Instance.everythingSpeed * 0.2f; // Velocidad del movimiento
+        parallaxSpeed = globals.Instance.everythingSpeed * 0.5f; // Velocidad del movimiento
         // Calcula el desplazamiento basado en el tiempo transcurrido
         float distance = Time.deltaTime * parallaxSpeed;
 

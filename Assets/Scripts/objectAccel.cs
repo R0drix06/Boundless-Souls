@@ -9,13 +9,13 @@ public class objectAccel : MonoBehaviour
 
     private void Start()
     {
-        gameSpeed = globals.Instance.everythingSpeed;
+        
     }
 
 
     void Update()
     {
-        
+        gameSpeed = globals.Instance.everythingSpeed;
         Rigidbody2D obstacleRB = this.gameObject.GetComponent<Rigidbody2D>();
         obstacleRB.velocity = Vector2.left * gameSpeed;
     }
