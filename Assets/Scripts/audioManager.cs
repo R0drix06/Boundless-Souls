@@ -15,10 +15,27 @@ public class audioManager : MonoBehaviour
     public AudioClip salto;
     public AudioClip deslizamiento;
 
+    #region Singleton
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        //DontDestroyOnLoad(gameObject);
+    }
+
+    #endregion
+
     void Start()
     {
         musica.clip = musicaFondo;
-        musica.Play();
+        PlayBackgroundMusic(true);
     }
 
     void Update()
@@ -50,4 +67,15 @@ public class audioManager : MonoBehaviour
         sfx.Play();
     }
 
+    public void PlayBackgroundMusic(bool toggleBackgroundMusic)
+    {
+        if (toggleBackgroundMusic)
+        {
+            musica.Play();
+        }
+        else
+        {
+            musica.Stop();
+        }
+    }
 }

@@ -7,7 +7,7 @@ public class comportamientoBotones : MonoBehaviour
 {
 
 
-    [SerializeField] public AudioSource musica1;
+    //[SerializeField] public AudioSource musica1;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,29 +34,29 @@ public class comportamientoBotones : MonoBehaviour
 
     }
 
-    public void musicPlay(bool active)
-    {
+    //public void musicPlay(bool active)
+    //{
 
        
 
 
-        if (active == true)
-        {
+    //    if (active == true)
+    //    {
 
 
-            musica1.Play();
-        }
-        else
-        {
+    //        musica1.Play();
+    //    }
+    //    else
+    //    {
 
 
-            musica1.Stop();
-        }
+    //        musica1.Stop();
+    //    }
 
 
 
 
-    }
+    //}
 }
 
   

@@ -1621,7 +1621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de27a89a5f8f26745bb6669aaab53673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musica1: {fileID: 159909355}
 --- !u!1 &496479075
 GameObject:
   m_ObjectHideFlags: 0
@@ -4931,9 +4930,9 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478415070}
-        m_TargetAssemblyTypeName: comportamientoBotones, Assembly-CSharp
-        m_MethodName: musicPlay
+      - m_Target: {fileID: 1356310979}
+        m_TargetAssemblyTypeName: audioManager, Assembly-CSharp
+        m_MethodName: PlayBackgroundMusic
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
