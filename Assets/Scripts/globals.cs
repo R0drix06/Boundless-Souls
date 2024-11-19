@@ -14,7 +14,7 @@ public class globals : MonoBehaviour
 
     private void Awake()
     {
-        everythingSpeed = 7.5f;
+        everythingSpeed = 6.5f;
         dischargeRate = 5f;
 
         if (Instance == null)
