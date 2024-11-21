@@ -14,6 +14,7 @@ public class audioManager : MonoBehaviour
     public AudioClip orbe;
     public AudioClip salto;
     public AudioClip deslizamiento;
+    public AudioClip teleport;
 
     #region Singleton
     private void Awake()
@@ -80,6 +81,12 @@ public class audioManager : MonoBehaviour
     public void SFX_Deslizamiento()
     {
         sfx.clip = deslizamiento;
+        sfx.Play();
+    }
+
+    public void SFX_Teleport()
+    {
+        sfx.clip = teleport;
         sfx.Play();
     }
 

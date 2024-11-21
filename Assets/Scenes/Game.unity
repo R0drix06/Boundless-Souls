@@ -3864,9 +3864,10 @@ MonoBehaviour:
   sfx: {fileID: 504513634}
   musicaFondo: {fileID: 8300000, guid: 1f82f48200ef48841aab9849794d3f39, type: 3}
   muerte: {fileID: 0}
-  orbe: {fileID: 0}
+  orbe: {fileID: 8300000, guid: a14790dd702032a4186d9f3f35913039, type: 3}
   salto: {fileID: 0}
   deslizamiento: {fileID: 0}
+  teleport: {fileID: 8300000, guid: 4a6d4fcf2033ae949b2038c7419d7f36, type: 3}
 --- !u!1 &1379171827
 GameObject:
   m_ObjectHideFlags: 0
@@ -4689,6 +4690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c521e9ba5cdb0408f779179803a89d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  am: {fileID: 1356310979}
   barra: {fileID: 639866756}
   porcentajeBarra: 100
   porcentajeActual: 100

@@ -1092,7 +1092,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1394384506}
-  - component: {fileID: 1394384505}
+  - component: {fileID: 1394384507}
   m_Layer: 0
   m_Name: MenuAudio
   m_TagString: Untagged
@@ -1100,22 +1100,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1394384505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394384504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ace80479030aec14eac09d4c077d475c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musica: {fileID: 1715959929}
-  sfx: {fileID: 1852576172}
-  musicaFondo: {fileID: 8300000, guid: e4f91a6acb987bc4d96defbbe4767003, type: 3}
-  seleccion: {fileID: 0}
 --- !u!4 &1394384506
 Transform:
   m_ObjectHideFlags: 0
@@ -1133,6 +1117,22 @@ Transform:
   - {fileID: 1852576173}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1394384507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394384504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b252a0be9eb301742a8f3b4c3d5b17f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musica: {fileID: 1715959929}
+  sfx: {fileID: 1852576172}
+  musicaFondo: {fileID: 8300000, guid: e4f91a6acb987bc4d96defbbe4767003, type: 3}
+  seleccion: {fileID: 0}
 --- !u!1 &1715959928
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class menuAudio : MonoBehaviour
+public class opcionesAudio : MonoBehaviour
 {
     [SerializeField] AudioSource musica;
     [SerializeField] AudioSource sfx;
@@ -15,18 +15,24 @@ public class menuAudio : MonoBehaviour
         musica.clip = musicaFondo;
 
         musica.Play();
-       
-     
+
+
     }
 
+    // Update is called once per frame
     void Update()
     {
-        
-    }
 
-    public void SFX_Muerte()
-    {
-        sfx.clip = seleccion;
-        sfx.Play();
+
+        if (PlayerPrefs.GetInt("musicaPlay") == 1)
+        {
+
+            musica.Pause();
+
+        }
+        else
+        {
+            musica.UnPause();
+        }
     }
 }

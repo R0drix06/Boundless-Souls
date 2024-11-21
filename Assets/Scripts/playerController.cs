@@ -11,6 +11,8 @@ public class playerController : MonoBehaviour
     //                     Variables
     //======================================================
 
+    [SerializeField] audioManager am;
+
     [SerializeField] Image barra;
     public float porcentajeBarra = 100;
     public float porcentajeActual = 100;
@@ -136,6 +138,8 @@ public class playerController : MonoBehaviour
                 velocidad += 2;
                 sprite.flipY = false;
 
+                am.SFX_Teleport();
+
             }
             else if (rb2d.gravityScale > 0 && currentJumps == 0)
             {
@@ -162,6 +166,8 @@ public class playerController : MonoBehaviour
                 rb2d.gravityScale *= -1;
                 velocidad -= 2;
                 sprite.flipY = true;
+
+                am.SFX_Teleport();
 
             }
         }
@@ -267,6 +273,8 @@ public class playerController : MonoBehaviour
         {
             porcentajeActual += 20;
             Destroy(collision.gameObject);
+
+            am.SFX_Orbe();
         }
     }
 
