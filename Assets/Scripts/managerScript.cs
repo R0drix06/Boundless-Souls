@@ -12,13 +12,15 @@ public class managerScript : MonoBehaviour
     [SerializeField] GameObject loseScreen;
     [SerializeField] GameObject pauseScreen;
     [SerializeField] GameObject barra;
-    [SerializeField] GameObject botones;
+    [SerializeField] GameObject botonesPausa;
     [SerializeField] GameObject textoBot;
     [SerializeField] GameObject textoTop;
+    [SerializeField] GameObject botonesPerder; 
 
     private void Awake()
     {
-        botones.SetActive(false);
+        botonesPausa.SetActive(false);
+        botonesPerder.SetActive(false);
         barra.SetActive(true);
         pauseScreen.SetActive(false);
         loseScreen.SetActive(false);
@@ -45,9 +47,7 @@ public class managerScript : MonoBehaviour
             Time.timeScale = 0;
 
             loseScreen.SetActive(true);
-            botones.SetActive(true);
-
-
+            botonesPerder.SetActive(true);
 
             //SceneManager.LoadScene("MainMenu");
         }
@@ -60,7 +60,7 @@ public class managerScript : MonoBehaviour
                 pauseScreen.SetActive(true);
                 Time.timeScale = 0;
                 barra.SetActive(false);
-                botones.SetActive(true);
+                botonesPausa.SetActive(true);
 
 
             }
@@ -71,7 +71,7 @@ public class managerScript : MonoBehaviour
                 pauseScreen.SetActive(false);
                 Time.timeScale = 1;
                 barra.SetActive(true);
-                botones.SetActive(false);
+                botonesPausa.SetActive(false);
             }
 
 
