@@ -12,7 +12,7 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        elapsedTime += Time.deltaTime * timeScale; // Escala la velocidad del temporizador
+        elapsedTime += Time.deltaTime * 100; // Escala la velocidad del temporizador
         int score = Mathf.FloorToInt(elapsedTime); // Redondea a entero
         timerText.text = score.ToString("D6"); // Formatea con 6 dígitos (000001, 000002, ...)
     }
