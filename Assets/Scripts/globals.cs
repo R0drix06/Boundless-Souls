@@ -5,6 +5,8 @@ using UnityEngine;
 public class globals : MonoBehaviour
 {
 
+    private float limiteVelocidad = 12f;
+    private float aceleracion = 0.15f;
 
     public static globals Instance;
     public float everythingSpeed;
@@ -32,9 +34,9 @@ public class globals : MonoBehaviour
     void Update()
     {
         
-        if (everythingSpeed <= 12f)
+        if (everythingSpeed <= limiteVelocidad)
         {
-            everythingSpeed += 0.15f * Time.deltaTime;
+            everythingSpeed += aceleracion * Time.deltaTime;
         }
         if (dischargeRate <= 15)
         {

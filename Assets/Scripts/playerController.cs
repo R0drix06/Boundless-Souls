@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static Unity.Burst.Intrinsics.X86;
@@ -21,8 +22,16 @@ public class playerController : MonoBehaviour
     BoxCollider2D playerCollider;
     Rigidbody2D rb2d;
     [SerializeField] private float velocidad = 13f;
+
+    private float posicionArriba = 6.3f;
+    private float posicionAbajo = -6.3f;
+    private float impulso = 1.15f;
     private float slideTime = 1f;
     private float currentSlidetime;
+    private float aceleracion = 0.125f;
+    private float gravedadMax = 15f;
+    private float gravedadMin = -15f;
+    private float porcentajeOrbe = 20f;
     public bool isTop = false;
     public bool isBot = false;
     private bool isSliding = false;
@@ -120,7 +129,7 @@ public class playerController : MonoBehaviour
         {
             if (isBot && currentJumps > 0)
             {
-                rb2d.velocity = Vector2.up * velocidad * 1.15f; //Salto Hacia Arriba
+                rb2d.velocity = Vector2.up * velocidad * impulso; //Salto Hacia Arriba
                 currentJumps--;
                 isSliding = false;
 
@@ -133,7 +142,7 @@ public class playerController : MonoBehaviour
             {
 
                 currentJumps = 1;
-                transform.Translate(0, -6.3f, 0); //TP Hacia Abajo
+                transform.Translate(0, posicionAbajo, 0); //TP Hacia Abajo
                 rb2d.gravityScale *= -1;
                 velocidad += 2;
                 sprite.flipY = false;
@@ -162,7 +171,7 @@ public class playerController : MonoBehaviour
             }
             else if (isBot)
             {
-                transform.Translate(0, 6.3f, 0); //TP Hacia Arriba
+                transform.Translate(0, posicionArriba, 0); //TP Hacia Arriba
                 rb2d.gravityScale *= -1;
                 velocidad -= 2;
                 sprite.flipY = true;
@@ -173,9 +182,9 @@ public class playerController : MonoBehaviour
         }
 
         //Aceleración
-        if (rb2d.gravityScale <= 15 && rb2d.gravityScale >= -15)
+        if (rb2d.gravityScale <= gravedadMax && rb2d.gravityScale >= gravedadMin)
         {
-            velocidad += 0.125f * Time.deltaTime;
+            velocidad += aceleracion * Time.deltaTime;
 
             if (rb2d.gravityScale > 0)
             {
@@ -271,7 +280,7 @@ public class playerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Orb"))
         {
-            porcentajeActual += 20;
+            porcentajeActual += porcentajeOrbe;
             Destroy(collision.gameObject);
 
             am.SFX_Orbe();
@@ -337,7 +346,6 @@ public class playerController : MonoBehaviour
                                  ?1.     .'         
                                      7<..%
  
-    Usa al sonic para volver cuando se rompa algo
 
     */
 

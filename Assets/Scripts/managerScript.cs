@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class managerScript : MonoBehaviour
 {
     public float gameSpeed = 7.5f;
+    private float speedLimit = 12f;
+    private float aceleracion = 0.175f;
     private bool isPaused = false;
 
     [SerializeField] GameObject player;
@@ -33,9 +35,9 @@ public class managerScript : MonoBehaviour
     {       
 
 
-        if (gameSpeed <= 12f)
+        if (gameSpeed <= speedLimit)
         {
-            gameSpeed += 0.175f * Time.deltaTime;
+            gameSpeed += aceleracion * Time.deltaTime;
         }
 
 

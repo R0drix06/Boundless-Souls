@@ -8,10 +8,12 @@ public class spawnerOrb : MonoBehaviour
     public float obstacleSpawnTime = 3.0f;
     public float timeUntilObstacleSpawn;
 
+    private float spawnLimit = 0.75f;
+
     private void Update()
     {
         SpawnLoop();
-        if (obstacleSpawnTime >= 0.75)
+        if (obstacleSpawnTime >= spawnLimit)
         {
             obstacleSpawnTime -= 0.05f * Time.deltaTime;
         }

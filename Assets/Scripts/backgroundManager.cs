@@ -8,6 +8,8 @@ public class backgroundManager : MonoBehaviour
     [SerializeField] private SpriteRenderer[] midgroundPrefab;
     [SerializeField] private SpriteRenderer[] foregroundPrefab;
 
+    private float spawnLimit = 0.75f;
+    private float aceleracion = 0.175f;
     public float spawnTime = 3.0f;
     public float timeUntilSpawn;
     public float backgroundSpeed = 7.25f;
@@ -17,10 +19,10 @@ public class backgroundManager : MonoBehaviour
     private void Update()
     {
         SpawnLoop();
-        if (spawnTime >= 0.75)
+        if (spawnTime >= spawnLimit)
         {
             spawnTime -= 0.05f * Time.deltaTime;
-            backgroundSpeed += 0.175f * Time.deltaTime;
+            backgroundSpeed += aceleracion * Time.deltaTime;
         }
 
     }
