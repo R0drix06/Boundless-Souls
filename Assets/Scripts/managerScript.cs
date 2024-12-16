@@ -17,7 +17,8 @@ public class managerScript : MonoBehaviour
     [SerializeField] GameObject botonesPausa;
     [SerializeField] GameObject textoBot;
     [SerializeField] GameObject textoTop;
-    [SerializeField] GameObject botonesPerder; 
+    [SerializeField] GameObject botonesPerder;
+    [SerializeField] GameObject puntuacion;
 
     private void Awake()
     {
@@ -45,6 +46,7 @@ public class managerScript : MonoBehaviour
         {
             Destroy(player);
             Destroy(barra);
+            Destroy(puntuacion); 
 
             Time.timeScale = 0;
 
@@ -62,6 +64,7 @@ public class managerScript : MonoBehaviour
                 pauseScreen.SetActive(true);
                 Time.timeScale = 0;
                 barra.SetActive(false);
+                puntuacion.SetActive(false);
                 botonesPausa.SetActive(true);
 
 
@@ -73,6 +76,7 @@ public class managerScript : MonoBehaviour
                 pauseScreen.SetActive(false);
                 Time.timeScale = 1;
                 barra.SetActive(true);
+                puntuacion.SetActive(true);
                 botonesPausa.SetActive(false);
             }
 
