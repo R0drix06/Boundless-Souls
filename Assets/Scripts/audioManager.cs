@@ -6,7 +6,7 @@ using UnityEngine;
 public class audioManager : MonoBehaviour
 {
     [SerializeField] public AudioSource musica;
-    [SerializeField] AudioSource sfx;
+    [SerializeField] private AudioSource sfx;
     public static audioManager Instance;
 
     public AudioClip musicaFondo;
@@ -16,6 +16,7 @@ public class audioManager : MonoBehaviour
     public AudioClip deslizamiento;
     public AudioClip teleport;
 
+    /*
     #region Singleton
     private void Awake()
     {
@@ -28,10 +29,11 @@ public class audioManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     #endregion
+    */
 
     void Start()
     {
