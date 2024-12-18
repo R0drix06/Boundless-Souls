@@ -26,10 +26,10 @@ public class Timer : MonoBehaviour
         PlayerPrefs.SetInt("RunScore", puntuacion);
         PlayerPrefs.GetInt("RunScore");
 
-       // if (puntuacion > PlayerPrefs.GetInt("HighScore", 0))
-       //{
-       //    PlayerPrefs.SetInt("HighScore", puntuacion);
-       //}
+       if (puntuacion > PlayerPrefs.GetInt("Highestscore", 0))
+       {
+          PlayerPrefs.SetInt("Highestscore", puntuacion);
+       }
 
     }
 }
