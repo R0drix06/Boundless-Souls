@@ -344,7 +344,7 @@ public class playerController : MonoBehaviour
                             JiJ           .` 
                               .1.         J 
                                  ?1.     .'         
-                                     7<..%
+                                     7<..&
  
 
     */
