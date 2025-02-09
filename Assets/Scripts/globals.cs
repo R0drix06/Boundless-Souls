@@ -13,11 +13,13 @@ public class globals : MonoBehaviour
     public float dischargeRate;
 
     public bool perder = false;
+    public bool isPaused = false;
 
     private void Awake()
     {
         everythingSpeed = 5f;
         dischargeRate = 5f;
+        isPaused = false;
 
         if (Instance == null)
         {

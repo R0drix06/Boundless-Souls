@@ -38,6 +38,7 @@ public class playerController : MonoBehaviour
     private int currentJumps = 2;
     private Animator anim;
     private SpriteRenderer sprite;
+    
 
     //======================================================
     //                     Funciones
@@ -125,7 +126,7 @@ public class playerController : MonoBehaviour
 
 
         //Movimiento
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        if (globals.Instance.isPaused == false && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
         {
             if (isBot && currentJumps > 0)
             {
@@ -158,7 +159,7 @@ public class playerController : MonoBehaviour
             }
         }
 
-        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        else if (globals.Instance.isPaused == false && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)))
         {
             if (rb2d.gravityScale < 0 && currentJumps > 0)
             {

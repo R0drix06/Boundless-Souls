@@ -8,7 +8,7 @@ public class managerScript : MonoBehaviour
     public float gameSpeed = 7.5f;
     private float speedLimit = 12f;
     private float aceleracion = 0.175f;
-    private bool isPaused = false;
+    //private bool isPausedPrivate = globals.Instance.isPaused;
 
     [SerializeField] GameObject player;
     [SerializeField] GameObject loseScreen;
@@ -58,9 +58,9 @@ public class managerScript : MonoBehaviour
 
         if((Input.GetKeyDown(KeyCode.Escape) || Input.GetKey(KeyCode.P)) && globals.Instance.perder == false)
         {
-            if ( isPaused == false) {
+            if (globals.Instance.isPaused == false) {
 
-                isPaused = true;
+                globals.Instance.isPaused = true;
                 pauseScreen.SetActive(true);
                 Time.timeScale = 0;
                 barra.SetActive(false);
@@ -70,9 +70,9 @@ public class managerScript : MonoBehaviour
 
             }
 
-            else if (isPaused == true)
+            else if (globals.Instance.isPaused == true)
             {
-                isPaused = false;
+                globals.Instance.isPaused = false;
                 pauseScreen.SetActive(false);
                 Time.timeScale = 1;
                 barra.SetActive(true);
